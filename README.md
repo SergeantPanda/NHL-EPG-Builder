@@ -1,10 +1,14 @@
 # NHL XMLTV Builder
 
+## About
+
+My reason for building these scripts is all of the current NHL XMLTV files I've found have been in the wrong order for the providers channels that I've tried. I've found that they pull the schedule from ESPN which lists games in a different order than NHL's website. This script utilizes the order from the NHL's website.
+
 This software is a comprehensive system for building an xmltv file, it will generate png images for game matchups, and extract game schedule information from the NHL website. It consists of three main components:
 
 1. **NHL Schedule Generator**: Python script (`Build XML.py`) for generating an XML TV schedule for NHL games based on scraped data from the NHL website. It utilizes various modules and functions to parse game schedules, convert timezones, and build an XML document in the XMLTV format.
 
-2. **SVG Generation for NHL Matchups**: Python script (`Generate_Matchup_SVG.py`) for generating SVG images for NHL game matchups by combining two team logos with a center graphic. It utilizes web scraping techniques to download, cache, and combine SVG content and then convert it to a PNG image using CairoSVG.
+2. **SVG Generation for NHL Matchups**: Python script (`Generate_Matchup_SVG.py`) for generating PNG images for NHL game matchups by combining two team logos with a center graphic. It utilizes web scraping techniques to download, cache, and combine SVG content and then convert it to a PNG image using CairoSVG.
 
 3. **NHL Schedule Extractor**: Python script (`Extract_Schedule_From_NHL.py`) for extracting NHL game schedule information from the NHL website. It utilizes web scraping techniques with the BeautifulSoup library to parse the HTML content and extract relevant data such as game date, time, teams, and networks broadcasting the games.
 
