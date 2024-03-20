@@ -1,4 +1,4 @@
-# NHL Schedule Management System
+# NHL XMLTV Builder
 
 This software is a comprehensive system for building an xmltv file, it will generate png images for game matchups, and extract game schedule information from the NHL website. It consists of three main components:
 
