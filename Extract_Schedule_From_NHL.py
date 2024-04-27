@@ -22,6 +22,9 @@ def scrape_nhl_schedule():
                 home_team = columns[2].find(class_='teamName').a.get_text().strip()
                 home_team_long = columns[2].find(class_='team-logo')['title'].strip()
                 home_team_logo = columns[2].find(class_='team-logo')['src'].strip().split('?v=')[0]
+                if columns[3].get_text().strip()=='TBD':
+                    print("Stopping schedule builder as the game on " + date + " against " + away_team + " and " + home_team + " is still TBD.")
+                    break
                 time = columns[3].find(class_='skedStartTimeEST').get_text().strip()
                 networks = columns[4].get_text().strip()
                 
